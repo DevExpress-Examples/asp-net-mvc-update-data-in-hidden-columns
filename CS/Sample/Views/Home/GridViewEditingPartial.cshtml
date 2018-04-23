@@ -1,0 +1,32 @@
+@model List<Sample.Models.Person>
+
+@Html.DevExpress().GridView(
+    settings => {
+        settings.Name = "grid";
+        settings.KeyFieldName = "PersonID";
+        settings.CallbackRouteValues = new { Controller = "Home", Action = "GridViewEditingPartial" };
+
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Home", Action = "EditingAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Home", Action = "EditingUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Home", Action = "EditingDelete" };
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+
+        settings.Columns.Add("FirstName");
+        //settings.Columns.Add("MiddleName");
+        settings.Columns.Add("LastName");
+
+        settings.CustomJSProperties = (sender, e) => {
+            MVCxGridView gridView = (MVCxGridView)sender;
+            if (gridView.EditingRowVisibleIndex > -1) {
+                e.Properties["cpMiddleName"] = gridView.GetRowValues(gridView.EditingRowVisibleIndex, "MiddleName");
+            }
+        };
+
+        settings.ClientSideEvents.BeginCallback = "function(s, e) { if(s.cpMiddleName) e.customArgs['MiddleName'] =  s.cpMiddleName; }";
+    }
+).Bind(Model).GetHtml()
