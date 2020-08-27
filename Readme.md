@@ -8,6 +8,9 @@
 * [Index.cshtml](./CS/Sample/Views/Home/Index.cshtml)
 <!-- default file list end -->
 # GridView - How to implement data editing with hidden column
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e5121/)**
+<!-- run online end -->
 
 
 <p><strong>Problem:</strong></p>
