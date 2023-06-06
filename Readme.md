@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to update data in hidden columns
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e5121/)**
+**[[Run Online]](https://codecentral.devexpress.com/128550278/)**
 <!-- run online end -->
 
 This example demonstrates how to configure the grid's edit functionality to update the values of hidden columns.
