@@ -5,6 +5,8 @@
 
 This example demonstrates how to configure the grid's edit functionality to update the values of hidden columns.
 
+![Update data in hidden columns](hiddenColumn.png)
+
 ## Overview
 
 Handle the grid's server-side [CustomJSProperties](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.GridViewSettings.CustomJSProperties) event to get the edited row values and pass them to the client.
