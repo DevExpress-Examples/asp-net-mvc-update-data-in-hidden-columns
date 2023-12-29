@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Grid View for ASP.NET MVC - How to update data in hidden columns
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128550278/)**
-<!-- run online end -->
 
 This example demonstrates how to configure the grid's edit functionality to update the values of hidden columns.
 
